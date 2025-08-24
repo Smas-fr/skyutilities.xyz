@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkyUtilities | Home</title>
+  <link rel="icon" type="image/png" href="/skyutilities.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .user-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+    }
+    .user-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
+    }
+    .user-toggle:hover {
+      background-color: #1A1C32;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #1A1C32;
+      border: 1px solid #1A1C32;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 5px;
+      min-width: 150px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .dropdown.hidden {
+      display: none;
+    }
+    .dropdown a {
+      padding: 0.5rem 1rem;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background-color 0.15s ease;
+    }
+
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="skyutilities.png" alt="Sky Bot" class="logo-img" />
+      <span>SkyUtilities</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&integration_type=0&scope=applications.commands+bot">Invite</a></li>
+        <li><a href="https://discord.com/invite/tsvn94U3gR">Support</a></li>
+        <li><a href="legal.html">Legal</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li id="auth-section">
+          <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient" id="login-btn">Login</a>
+        </li>
+      </ul>
+    </nav>
+    
+    </div>
+</header>
+<section class="hero">
+  <div class="container hero-content"> 
+    <h1>
+      <span class="white-text">Server</span> 
+      <span class="blue-text">Growth</span> 
+      <span class="white-text">Redone</span>
+    </h1>
+    <p>Meet Sky, the perfect growth bot for your community.</p>
+    <p>SkyUtilities is a server and player management bot. Our team is dedicated to providing you with the best services possible.</p>
+    
+    <div class="button-group hero-buttons">
+      <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient">Add To Your Server</a>
+      <a href="https://discord.com/invite/tsvn94U3gR" class="btn btn-outline">Support Server</a>
+    </div>
+  </div>
+</section>
+
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-description">SkyUtilities is a server and player management bot. Our team is dedicated to providing you with the best services possible.</p>
+      <div class="features-grid">
+<div class="feature-card big-feature-card">
+  <div class="feature-field">
+    <h4>Reminders</h4>
+    <p>Keep your server growing with automated reminders.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Player Management</h4>
+    <p>Easy and efficient player management.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Discord Checks</h4>
+    <p>Find out the users that are / aren't in your discord server.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Active Community</h4>
+    <p>Engage with your community through various interactive features.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Uptime</h4>
+    <p>No need to worry about frequent downtime, SkyUtilities has a team ensuring it is always online.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Engagement</h4>
+    <p>Our dedicated team is committed to you, we work around the clock to ensure your satisfaction.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Updates</h4>
+    <p>SkyUtilities Operations Team is constantly working on new updates to enhance your experience.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Analytics</h4>
+    <p>Get insights into your server's performance and player engagement.</p>
+  </div>
+  <div class="feature-field">
+    <h4>Status</h4>
+    <p>Find our our bot's live status via our <a href="https://skyutilities.betteruptime.com" target="_blank" rel="noopener noreferrer" class="feature-link">Status Website</a>.</p>
+  </div>
+</div>
+    </div>
+  </section>
+<section id="statistics" class="statistics-section scroll-zoom">
+  <div class="container">
+    <h2 class="section-title">Statistics</h2>
+    <p class="section-description">With thousands of active users and hundreds of servers, we are a trusted growth management bot on the platform.</p>
+    <p>Join us while we remake server growth.</p>
+    <div class="container">
+<div class="statistics-inline">
+      <div class="statistics-field">
+        <h4>Members</h4>
+        <code class="stats-code" id="members-count">Loading...</code>
+      </div>
+      <div class="statistics-field">
+        <h4>Servers</h4>
+        <code class="stats-code" id="servers-count">Loading...</code>
+      </div>
+      <div class="statistics-field">
+        <h4>Discord Checks</h4>
+        <code class="stats-code" id="checks-count">Loading...</code>
+      </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="upgrade-section scroll-zoom">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card upgrade-card">
+        <div class="upgrade-text">
+          <h2 class="upgrade-title">Ready to upgrade?</h2>
+          <p class="upgrade-description">
+            SkyUtilities has a ton of hidden surprises for you to discover.
+          </p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient" id="login-btn">
+            I'm ready, let's go!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="above pre footer" style="background: transparent; padding: 30px 20px; text-align: center; color: #00b7ff;">
+  <h2 style="margin-bottom: 15px; font-weight: 700;">Join Our Community!</h2>
+<p style="margin-bottom: 20px; font-size: 1.1rem; color: white;">
+  Need help or want to stay updated? Join our Discord support server.
+</p>
+  <a href="https://discord.com/invite/tsvn94U3gR" target="_blank" rel="noopener noreferrer" 
+       class="btn btn-gradient" style="padding: 12px 30px; font-weight: 600; border-radius: 6px; color: white; text-decoration: none; background: linear-gradient(90deg, #00b7ff);">
+    Join Discord
+  </a>
+</section>
+
+<section class="pre-footer">
+  <div class="container pre-footer-grid">
+    <div class="pre-footer-brand">
+      <div class="pre-footer-brand-row">
+        <img src="skyutilities.png" alt="SkyUtilities Logo" class="pre-footer-logo" />
+        <h2 class="pre-footer-title">SkyUtilities</h2>
+      </div>
+      <p class="pre-footer-description">
+        SkyUtilities is the most popular solution for growing your ER:LC server, with features from reminders to player management, and everything in between.
+        SkyUtilities has it all.
+      </p>
+    </div>
+    <div class="pre-footer-links">
+      <div class="pre-footer-column">
+        <h4>Links</h4>
+        <ul>
+          
+          <li><a href="https://discord.com/invite/tsvn94U3gR">Support</a></li>
+          <li><a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands">Invite</a></li>
+          <li><a href="https://top.gg/bot/1377632934965674055/vote">Vote</a></li>
+        </ul>
+      </div>
+      <div class="pre-footer-column pre-footer-column-blue">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="https://discord.com/invite/tsvn94U3gR">Discord</a></li>
+          <li><a href="https://discord.com/channels/1362453351429833008/1391062344620179546">Report Bugs</a></li>
+          <li><a href="https://skyutilities.betteruptime.com">SkyUtilities Status</a></li>
+        </ul>
+      </div>
+      <div class="pre-footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="legal.html">Terms</a></li>
+          <li><a href="legal.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const zoomElements = document.querySelectorAll(".scroll-zoom");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0.8) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    }, { threshold: [0.8] });
+
+    zoomElements.forEach(el => observer.observe(el));
+  });
+</script>
+
+<script>
+  async function getUserInfo() {
+    try {
+      const res = await fetch("/api/me");
+      if (!res.ok) return;
+
+      const user = await res.json();
+
+      const authSection = document.getElementById("auth-section");
+      authSection.innerHTML = `
+        <div class="user-menu" id="user-menu">
+          <div class="user-toggle" onclick="toggleDropdown()">
+            <img src="${user.avatar ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=64` : 'https://cdn.discordapp.com/embed/avatars/0.png'}" alt="User Avatar" class="avatar" id="user-avatar" />
+            <span id="user-name">${user.username}</span>
+          </div>
+          <div class="dropdown hidden" id="dropdown">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" id="logout-btn">Logout</a>
+          </div>
+        </div>
+      `;
+
+        document.getElementById('logout-btn').addEventListener('click', e => {
+          e.preventDefault();
+          logout();
+        });
+      } catch (e) {
+        console.log("User not logged in");
+      }
+    }
+
+async function updateStats() {
+    try {
+      const response = await fetch('/api/stats');
+      if (!response.ok) {
+        console.error('Failed to fetch stats:', response.statusText);
+        return;
+      }
+      const data = await response.json();
+      
+      document.getElementById('members-count').textContent = `${data.members}`;
+      document.getElementById('servers-count').textContent = `${data.servers}`;
+      document.getElementById('checks-count').textContent = `${data.discordChecks}+`;
+
+    } catch (error) {
+      console.error('Error fetching and updating stats:', error);
+    }
+}
+  function toggleDropdown() {
+    const dropdown = document.getElementById("dropdown");
+    if (dropdown) dropdown.classList.toggle("hidden");
+  }
+
+    function logout() {
+      fetch("/logout", { method: "GET" })
+        .then(() => window.location.reload())
+        .catch(console.error);
+    }
+
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'logout-btn') {
+      e.preventDefault();
+      logout();
+    }
+  });
+
+
+  document.addEventListener('click', (event) => {
+    const dropdown = document.getElementById("dropdown");
+    const toggle = document.querySelector(".user-toggle");
+    if (!dropdown || !toggle) return;
+    if (!dropdown.classList.contains("hidden") && !dropdown.contains(event.target) && !toggle.contains(event.target)) {
+      dropdown.classList.add("hidden");
+    }
+  });
+
+  window.onload = () => {
+    updateStats();
+    getUserInfo();
+  };
+</script>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <p>&copy; 2025 SkyUtilities. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
