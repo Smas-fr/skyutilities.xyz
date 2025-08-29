@@ -1,342 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SkyUtilities | Home</title>
-  <link rel="icon" type="image/png" href="/skyutilities.png">
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    .user-menu {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-      user-select: none;
-    }
-    .user-toggle {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.3rem 0.5rem;
-      border-radius: 5px;
-      transition: background-color 0.2s ease;
-    }
-    .user-toggle:hover {
-      background-color: #1A1C32;
-    }
-    .avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-    }
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: #1A1C32;
-      border: 1px solid #1A1C32;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      border-radius: 5px;
-      min-width: 150px;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .dropdown.hidden {
-      display: none;
-    }
-    .dropdown a {
-      padding: 0.5rem 1rem;
-      color: #ffffff;
-      text-decoration: none;
-      transition: background-color 0.15s ease;
-    }
-
-  </style>
-</head>
-<body>
-<header class="navbar">
-  <div class="container">
-    <a href="index.html" class="logo">
-      <img src="skyutilities.png" alt="Sky Bot" class="logo-img" />
-      <span>SkyUtilities</span>
-    </a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&integration_type=0&scope=applications.commands+bot">Invite</a></li>
-        <li><a href="https://discord.com/invite/tsvn94U3gR">Support</a></li>
-        <li><a href="legal.html">Legal</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li id="auth-section">
-          <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient" id="login-btn">Login</a>
-        </li>
-      </ul>
-    </nav>
-    
-    </div>
-</header>
-<section class="hero">
-  <div class="container hero-content"> 
-    <h1>
-      <span class="white-text">Server</span> 
-      <span class="blue-text">Growth</span> 
-      <span class="white-text">Redone</span>
-    </h1>
-    <p>Meet Sky, the perfect growth bot for your community.</p>
-    <p>SkyUtilities is a server and player management bot. Our team is dedicated to providing you with the best services possible.</p>
-    
-    <div class="button-group hero-buttons">
-      <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient">Add To Your Server</a>
-      <a href="https://discord.com/invite/tsvn94U3gR" class="btn btn-outline">Support Server</a>
-    </div>
-  </div>
-</section>
-
-  <section id="features" class="features-section">
-    <div class="container">
-      <h2 class="section-title">Features</h2>
-      <p class="section-description">SkyUtilities is a server and player management bot. Our team is dedicated to providing you with the best services possible.</p>
-      <div class="features-grid">
-<div class="feature-card big-feature-card">
-  <div class="feature-field">
-    <h4>Reminders</h4>
-    <p>Keep your server growing with automated reminders.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Player Management</h4>
-    <p>Easy and efficient player management.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Discord Checks</h4>
-    <p>Find out the users that are / aren't in your discord server.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Active Community</h4>
-    <p>Engage with your community through various interactive features.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Uptime</h4>
-    <p>No need to worry about frequent downtime, SkyUtilities has a team ensuring it is always online.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Engagement</h4>
-    <p>Our dedicated team is committed to you, we work around the clock to ensure your satisfaction.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Updates</h4>
-    <p>SkyUtilities Operations Team is constantly working on new updates to enhance your experience.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Analytics</h4>
-    <p>Get insights into your server's performance and player engagement.</p>
-  </div>
-  <div class="feature-field">
-    <h4>Status</h4>
-    <p>Find our our bot's live status via our <a href="https://skyutilities.betteruptime.com" target="_blank" rel="noopener noreferrer" class="feature-link">Status Website</a>.</p>
-  </div>
-</div>
-    </div>
-  </section>
-<section id="statistics" class="statistics-section scroll-zoom">
-  <div class="container">
-    <h2 class="section-title">Statistics</h2>
-    <p class="section-description">With thousands of active users and hundreds of servers, we are a trusted growth management bot on the platform.</p>
-    <p>Join us while we remake server growth.</p>
-    <div class="container">
-<div class="statistics-inline">
-      <div class="statistics-field">
-        <h4>Members</h4>
-        <code class="stats-code" id="members-count">Loading...</code>
-      </div>
-      <div class="statistics-field">
-        <h4>Servers</h4>
-        <code class="stats-code" id="servers-count">Loading...</code>
-      </div>
-      <div class="statistics-field">
-        <h4>Discord Checks</h4>
-        <code class="stats-code" id="checks-count">Loading...</code>
-      </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<section class="upgrade-section scroll-zoom">
-  <div class="container">
-    <div class="features-grid">
-      <div class="feature-card upgrade-card">
-        <div class="upgrade-text">
-          <h2 class="upgrade-title">Ready to upgrade?</h2>
-          <p class="upgrade-description">
-            SkyUtilities has a ton of hidden surprises for you to discover.
-          </p>
-          <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands" class="btn btn-gradient" id="login-btn">
-            I'm ready, let's go!
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="above pre footer" style="background: transparent; padding: 30px 20px; text-align: center; color: #00b7ff;">
-  <h2 style="margin-bottom: 15px; font-weight: 700;">Join Our Community!</h2>
-<p style="margin-bottom: 20px; font-size: 1.1rem; color: white;">
-  Need help or want to stay updated? Join our Discord support server.
-</p>
-  <a href="https://discord.com/invite/tsvn94U3gR" target="_blank" rel="noopener noreferrer" 
-       class="btn btn-gradient" style="padding: 12px 30px; font-weight: 600; border-radius: 6px; color: white; text-decoration: none; background: linear-gradient(90deg, #00b7ff);">
-    Join Discord
-  </a>
-</section>
-
-<section class="pre-footer">
-  <div class="container pre-footer-grid">
-    <div class="pre-footer-brand">
-      <div class="pre-footer-brand-row">
-        <img src="skyutilities.png" alt="SkyUtilities Logo" class="pre-footer-logo" />
-        <h2 class="pre-footer-title">SkyUtilities</h2>
-      </div>
-      <p class="pre-footer-description">
-        SkyUtilities is the most popular solution for growing your ER:LC server, with features from reminders to player management, and everything in between.
-        SkyUtilities has it all.
-      </p>
-    </div>
-    <div class="pre-footer-links">
-      <div class="pre-footer-column">
-        <h4>Links</h4>
-        <ul>
-          
-          <li><a href="https://discord.com/invite/tsvn94U3gR">Support</a></li>
-          <li><a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands">Invite</a></li>
-          <li><a href="https://top.gg/bot/1377632934965674055/vote">Vote</a></li>
-        </ul>
-      </div>
-      <div class="pre-footer-column pre-footer-column-blue">
-        <h4>About Us</h4>
-        <ul>
-          <li><a href="https://discord.com/invite/tsvn94U3gR">Discord</a></li>
-          <li><a href="https://discord.com/channels/1362453351429833008/1391062344620179546">Report Bugs</a></li>
-          <li><a href="https://skyutilities.betteruptime.com">SkyUtilities Status</a></li>
-        </ul>
-      </div>
-      <div class="pre-footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="legal.html">Terms</a></li>
-          <li><a href="legal.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const zoomElements = document.querySelectorAll(".scroll-zoom");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0.8) {
-          entry.target.classList.add("show");
-        } else {
-          entry.target.classList.remove("show");
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkyUtilities</title>
+    <link rel="icon" type="image/png" href="/skyutilities.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to left, #000000, #9e8c6d);
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-      });
-    }, { threshold: [0.8] });
 
-    zoomElements.forEach(el => observer.observe(el));
-  });
-</script>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #9e8c6d;
+            border-radius: 5px;
+            border: 2px solid #1a1a1a;
+        }
 
-<script>
-  async function getUserInfo() {
-    try {
-      const res = await fetch("/api/me");
-      if (!res.ok) return;
+        .user-menu {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            user-select: none;
+        }
+        .user-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.3rem 0.5rem;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+        .user-toggle:hover {
+            background-color: #222;
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(34, 34, 34, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 50;
+            padding: 0.5rem;
+            min-width: 150px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #f5f5f5;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+        .dropdown a:hover {
+            background-color: #9e8c6d;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .navbar {
+            background-color: transparent;
+            padding: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .footer {
+            background-color: transparent;
+        }
+        .btn-primary {
+            background-color: #9e8c6d;
+            color: #101010;
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #c4b59e;
+            transform: translateY(-2px);
+        }
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+        }
+        .feature-icon {
+            background-color: #9e8c6d;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-icon svg {
+            color: #101010;
+            width: 24px;
+            height: 24px;
+        }
+        footer .pre-footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .pre-footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            .pre-footer-grid {
+                grid-template-columns: 1fr 2fr;
+                gap: 4rem;
+                text-align: left;
+            }
+        }
+        .pre-footer-brand-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .pre-footer-logo {
+            height: 40px;
+        }
+        .pre-footer-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #9e8c6d;
+        }
+        .pre-footer-description {
+            margin-top: 1rem;
+            color: #aaa;
+            max-width: 500px;
+        }
+        .pre-footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .pre-footer-links {
+                text-align: left;
+            }
+        }
+        .pre-footer-column h4 {
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #9e8c6d;
+        }
+        .pre-footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pre-footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        .pre-footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .pre-footer-column ul li a:hover {
+            color: #ffffff;
+        }
+        .pre-footer-column-blue h4 {
+            color: #9e8c6d;
+        }
+        #stats .card {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .navbar .container {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .container {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
 
-      const user = await res.json();
+        .cta-section {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .cta-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cta-image {
+            max-width: 120%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transform: rotateY(-15deg) rotateX(8deg) scale(1.3);
+            position: absolute;
+            top: -10%;
+            right: -20%;
+            opacity: 0.8;
+            filter: brightness(0.9);
+        }
 
-      const authSection = document.getElementById("auth-section");
-      authSection.innerHTML = `
-        <div class="user-menu" id="user-menu">
-          <div class="user-toggle" onclick="toggleDropdown()">
-            <img src="${user.avatar ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=64` : 'https://cdn.discordapp.com/embed/avatars/0.png'}" alt="User Avatar" class="avatar" id="user-avatar" />
-            <span id="user-name">${user.username}</span>
-          </div>
-          <div class="dropdown hidden" id="dropdown">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="#" id="logout-btn">Logout</a>
-          </div>
+        @media (max-width: 1023px) {
+            .cta-image {
+                position: relative;
+                top: auto;
+                right: auto;
+                transform: rotate(0deg) scale(1);
+                opacity: 1;
+                filter: none;
+                max-width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <nav class="navbar py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center rounded-xl shadow-lg">
+            <div class="flex items-center">
+                <img src="/skyutilities.png" alt="SkyUtilities Logo" class="h-10 w-auto" />
+                <a href="/" class="text-xl font-bold ml-2">SkyUtilities</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/dashboard.html" class="text-gray-300 hover:text-white transition duration-300">Dashboard</a>
+                <a href="https://discord.gg/tsvn94U3gR" class="text-gray-300 hover:text-white transition duration-300">Support</a>
+                <a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&integration_type=0&scope=applications.commands+bot" class="text-gray-300 hover:text-white transition duration-300">Invite</a>
+                <a href="/legal.html" class="text-gray-300 hover:text-white transition duration-300">Legal</a>
+                <a href="#features" class="text-gray-300 hover:text-white transition duration-300">Features</a>
+                <a href="#stats" class="text-gray-300 hover:text-white transition duration-300">Statistics</a>
+                <a href="/login" id="login-btn" class="btn-primary">Login</a>
+
+                <div class="user-menu" id="user-menu">
+                    <div class="user-toggle" onclick="toggleDropdown()">
+                        <img id="user-avatar" class="avatar" src="" alt="User Avatar" />
+                        <span id="user-name"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div id="dropdown" class="dropdown hidden">
+                        <a href="/dashboard.html">Dashboard</a>
+                        <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      `;
+    </nav>
 
-        document.getElementById('logout-btn').addEventListener('click', e => {
-          e.preventDefault();
-          logout();
-        });
-      } catch (e) {
-        console.log("User not logged in");
-      }
+    <main class="flex-grow">
+        <section class="py-20 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
+                Server Growth,<br><span class="text-[#9e8c6d]">Simplified</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                SkyUtilities is a server and player management bot. Our team is dedicated to providing you with the best services possible.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4 ">
+                <a href="/login" class="btn-primary hover:text-[#ffffff] transition duration-300 flex items-center">Add to Discord</a>
+<a href="/dashboard.html" class="bg-[#1a1a1a] text-white font-semibold rounded-lg px-6 py-3 hover:text-[#9e8c6d] transition duration-300 flex items-center">
+    Dashboard
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
+</a>
+            </div>
+        </section>
+
+<section id="features" class="py-20 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-4xl font-extrabold text-center mb-12">
+            Features That Make a Difference
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="card text-center bg-gray-[#101010] p-6 rounded-xl border border-[#9e8c6d] shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="feature-icon mx-auto p-4 rounded-full bg-[#9e8c6d] text-white w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mt-6 text-[#f5f5f5]">Automated Moderation</h3>
+                <p class="mt-2 text-gray-400">
+                    Keep your server clean and safe with powerful, automated moderation tools.
+                </p>
+            </div>
+
+            <div class="card text-center bg-gray-[#101010] p-6 rounded-xl border border-[#9e8c6d] shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="feature-icon mx-auto p-4 rounded-full bg-[#9e8c6d] text-white w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path d="M5.478 5.559A1.5 1.5 0 016.912 4.5H9a.75.75 0 000-1.5H6.912a3 3 0 00-2.81 2.03L3.75 7.5v11.25c0 .621.504 1.125 1.125 1.125h9.75a.75.75 0 000-1.5H6.375a.75.75 0 01-.75-.75V8.25C5.625 7.629 6.129 7.125 6.75 7.125h3.375a.75.75 0 00.75-.75V5.25a.75.75 0 00-.75-.75H9a1.5 1.5 0 01-1.434-1.066l-.082-.205a1.5 1.5 0 00-1.206-.859H4.5A.75.75 0 004.5 3h-.472c-.803 0-1.58.423-1.996 1.15-.386.685-.601 1.48-.601 2.31V21a.75.75 0 00.75.75h14.25a.75.75 0 00.75-.75v-3.088c.87.16 1.76.243 2.66.243 2.224 0 4.365-.17 6.476-.516a.75.75 0 00.061-1.493c-2.076.35-4.148.513-6.17.513-1.042 0-2.07-.05-3.085-.15q-.002.001-.005.001h-.002A18.995 18.995 0 0117.25 12c0-1.134-.112-2.253-.332-3.352q-.002-.001-.005-.002h-.002a21.432 21.432 0 01-3.085-.15q-2.022.35-4.148.513a.75.75 0 00.061 1.493c2.111.346 4.252.516 6.476.516.9 0 1.79-.083 2.66-.243v3.088a.75.75 0 00.75.75H21a.75.75 0 00.75-.75V7.5l-1.162-2.03a3 3 0 00-2.81-2.03H16.5a.75.75 0 00-.75.75v1.5a.75.75 0 001.5 0v-1.5a1.5 1.5 0 00-1.434-1.066l-.082-.205a1.5 1.5 0 00-1.206-.859H9.75a.75.75 0 00-.75.75v1.5a.75.75 0 001.5 0v-1.5c0-.83-.215-1.625-.601-2.31A1.5 1.5 0 006.912 4.5H6.912z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mt-6 text-[#f5f5f5]">Roblox Integration</h3>
+                <p class="mt-2 text-gray-400">
+                    Remotely moderate your private server without any hassle.
+                </p>
+            </div>
+            
+            <div class="card text-center bg-gray-[#101010] p-6 rounded-xl border border-[#9e8c6d] shadow-lg transition-transform duration-300 hover:scale-105">
+                <div class="feature-icon mx-auto p-4 rounded-full bg-[#9e8c6d] text-white w-16 h-16 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 7.5a.75.75 0 100 1.5h4.25a.75.75 0 000-1.5h-4.25zm.375 2.25a.75.75 0 100 1.5h4.25a.75.75 0 000-1.5h-4.25z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mt-6 text-[#f5f5f5]">Customizable Dashboard</h3>
+                <p class="mt-2 text-gray-400">
+                    Manage all bot settings and configurations through an intuitive web interface.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stats" class="py-20 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12">Community Statistics</h2>
+<div class="container mx-auto cta-section grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="card">
+            <p class="text-5xl font-extrabold text-[#9e8c6d]" id="members-count">0</p>
+            <p class="text-lg mt-2">Members</p>
+        </div>
+        <div class="card">
+            <p class="text-5xl font-extrabold text-[#9e8c6d]" id="servers-count">0</p>
+            <p class="text-lg mt-2">Servers</p>
+        </div>
+        <div class="card">
+            <p class="text-5xl font-extrabold text-[#9e8c6d]" id="checks-count">0</p>
+            <p class="text-lg mt-2">Daily Checks</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 px-4">
+    <div class="container mx-auto cta-section grid grid-cols-1 gap-12 items-center">
+        <div class="text-center z-10 max-w-lg mx-auto"> <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
+                Ready to <span class="text-[#9e8c6d]">Upgrade?</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                SkyUtilities has a boat load surprises in store for your server, which one will you discover first?
+            </p>
+            <a href="/login" class="btn-primary text-xl px-8 py-4 inline-block hover:text-white">I'm ready, lets go!</a>
+        </div>
+    </div>
+</section>
+
+
+        <section class="pre-footer">
+            <div class="container pre-footer-grid">
+                <div class="pre-footer-brand">
+                    <div class="pre-footer-brand-row">
+                        <img src="/skyutilities.png" alt="SkyUtilities Logo" class="pre-footer-logo" />
+                        <h2 class="pre-footer-title">SkyUtilities</h2>
+                    </div>
+                    <p class="pre-footer-description">
+                        SkyUtilities is the most popular solution for growing your ER:LC server, with features from reminders to player management, and everything in between.
+                        SkyUtilities has it all.
+                    </p>
+                </div>
+                <div class="pre-footer-links">
+                    <div class="pre-footer-column">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="https://discord.com/invite/tsvn94U3gR">Support</a></li>
+                            <li><a href="https://discord.com/oauth2/authorize?client_id=1377632934965674055&permissions=8&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fcallback&integration_type=0&scope=guilds+identify+bot+applications.commands">Invite</a></li>
+                            <li><a href="https://top.gg/bot/1377632934965674055/vote">Vote</a></li>
+                        </ul>
+                    </div>
+                    <div class="pre-footer-column pre-footer-column-blue">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="https://discord.com/invite/tsvn94U3gR">Discord</a></li>
+                            <li><a href="https://discord.com/channels/1362453351429833008/1391062344620179546">Report Bugs</a></li>
+                            <li><a href="https://skyutilities.betteruptime.com">SkyUtilities Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="pre-footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="legal.html">Terms</a></li>
+                            <li><a href="legal.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-8 mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2025 SkyUtilities. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const apiEndpoint = "/api/stats";
+
+        async function updateStats() {
+            try {
+                const response = await fetch(apiEndpoint);
+                const data = await response.json();
+
+                if (data) {
+                    document.getElementById('members-count').textContent = `${data.members}`;
+                    document.getElementById('servers-count').textContent = `${data.servers}`;
+                    document.getElementById('checks-count').textContent = `${data.discordChecks}+`;
+                }
+            } catch (error) {
+                console.error('Error fetching and updating stats:', error);
+            }
+        }
+
+async function getUserInfo() {
+    const loginBtn = document.getElementById('login-btn');
+    const userMenu = document.getElementById('user-menu');
+
+    try {
+        const response = await fetch('/api/me');
+
+        if (response.status === 401) {
+            console.log("User not logged in.");
+            loginBtn.classList.remove('hidden'); 
+            userMenu.classList.add('hidden');  
+            return;
+        }
+
+        const user = await response.json();
+
+        loginBtn.classList.add('hidden');        
+        userMenu.classList.remove('hidden');   
+        document.getElementById('user-name').textContent = user.username;
+        document.getElementById('user-avatar').src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=32`;
+
+    } catch (e) {
+        console.error("Error fetching user info:", e);
+        loginBtn.classList.remove('hidden'); 
+        userMenu.classList.add('hidden');  
     }
-
-async function updateStats() {
-    try {
-      const response = await fetch('/api/stats');
-      if (!response.ok) {
-        console.error('Failed to fetch stats:', response.statusText);
-        return;
-      }
-      const data = await response.json();
-      
-      document.getElementById('members-count').textContent = `${data.members}`;
-      document.getElementById('servers-count').textContent = `${data.servers}`;
-      document.getElementById('checks-count').textContent = `${data.discordChecks}+`;
-
-    } catch (error) {
-      console.error('Error fetching and updating stats:', error);
-    }
 }
-  function toggleDropdown() {
-    const dropdown = document.getElementById("dropdown");
-    if (dropdown) dropdown.classList.toggle("hidden");
-  }
 
-    function logout() {
-      fetch("/logout", { method: "GET" })
-        .then(() => window.location.reload())
-        .catch(console.error);
-    }
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdown");
+            if (dropdown) dropdown.classList.toggle("hidden");
+        }
 
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.id === 'logout-btn') {
-      e.preventDefault();
-      logout();
-    }
-  });
+        function logout() {
+            fetch("/logout", { method: "GET" })
+                .then(() => window.location.reload())
+                .catch(console.error);
+        }
 
+        document.addEventListener('click', function (e) {
+            if (e.target && e.target.id === 'logout-btn') {
+                e.preventDefault();
+                logout();
+            }
+        });
 
-  document.addEventListener('click', (event) => {
-    const dropdown = document.getElementById("dropdown");
-    const toggle = document.querySelector(".user-toggle");
-    if (!dropdown || !toggle) return;
-    if (!dropdown.classList.contains("hidden") && !dropdown.contains(event.target) && !toggle.contains(event.target)) {
-      dropdown.classList.add("hidden");
-    }
-  });
+        document.addEventListener('click', (event) => {
+            const dropdown = document.getElementById("dropdown");
+            const toggle = document.querySelector(".user-toggle");
+            if (!dropdown || !toggle) return;
+            if (!dropdown.classList.contains("hidden") && !dropdown.contains(event.target) && !toggle.contains(event.target)) {
+                dropdown.classList.add("hidden");
+            }
+        });
 
-  window.onload = () => {
-    updateStats();
-    getUserInfo();
-  };
-</script>
-
-<footer class="footer">
-  <div class="container footer-content">
-    <p>&copy; 2025 SkyUtilities. All rights reserved.</p>
-  </div>
-</footer>
+        window.onload = () => {
+            getUserInfo();
+            updateStats();
+        };
+    </script>
 </body>
 </html>
